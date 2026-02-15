@@ -1,20 +1,47 @@
+/* Import bàng màu */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
 .navbar {
     display: flex;
-    justify-content: space-between; /* Đẩy 2 phần về 2 đầu */
+    justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #f8f9fa;
+    padding: 1rem 10%; /* Tạo khoảng trống hai bên lề */
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Tạo hiệu ứng nổi lên */
+    position: sticky;
+    top: 0; /* Giữ menu luôn ở trên cùng khi cuộn trang */
+    z-index: 1000;
 }
 
 .nav-links a {
-    margin-right: 20px;
+    margin: 0 15px;
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
+    color: var(--text-color);
+    transition: color 0.3s; /* Hiệu ứng đổi màu mượt mà */
+}
+
+.nav-links a:hover {
+    color: var(--accent-color); /* Đổi màu khi di chuột vào */
 }
 
 .lang-controls button {
     cursor: pointer;
     margin-left: 5px;
     padding: 5px 10px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Bảng màu */
+:root {
+    --primary-color: #2d3436; /* Màu chính (ví dụ đen xám) */
+    --accent-color: #0984e3;  /* Màu nhấn (ví dụ xanh dương) */
+    --bg-color: #f4f7f6;      /* Màu nền nhẹ nhàng */
+    --text-color: #333;
 }
